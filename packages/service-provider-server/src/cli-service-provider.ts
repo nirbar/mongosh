@@ -71,7 +71,8 @@ import {
   ChangeStreamOptions,
   ChangeStream,
   bson as BSON,
-  ConnectionString
+  ConnectionString,
+  FLE
 } from '@mongosh/service-provider-core';
 
 import { MongoshCommandFailed, MongoshInternalError, MongoshRuntimeError } from '@mongosh/errors';
@@ -192,7 +193,7 @@ class CliServiceProvider extends ServiceProviderCore implements ServiceProvider 
   private initialOptions: MongoClientOptions;
   private dbcache: WeakMap<MongoClient, Map<string, Db>>;
   public baseCmdOptions: any; // public for testing
-  public fle: any;
+  public fle: FLE | undefined;
 
   /**
    * Instantiate a new CliServiceProvider with the Node driver's connected
