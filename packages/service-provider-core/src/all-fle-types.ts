@@ -1,4 +1,7 @@
 export type {
+  AWSEncryptionKeyOptions,
+  AzureEncryptionKeyOptions,
+  GCPEncryptionKeyOptions,
   ClientEncryption,
   ClientEncryptionCreateDataKeyCallback,
   ClientEncryptionCreateDataKeyProviderOptions,
@@ -7,7 +10,6 @@ export type {
   ClientEncryptionEncryptCallback,
   ClientEncryptionEncryptOptions,
   ClientEncryptionOptions,
-  DataKeyId,
   KMSProviders
 } from 'mongodb-client-encryption';
 

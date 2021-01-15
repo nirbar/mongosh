@@ -100,5 +100,8 @@ export default interface Admin {
    */
   getRawClient(): any;
 
-  fle: FLE | undefined;
+  /**
+   * The FLE implementation for access to the client-side encryption API.
+   */
+  fle?: FLE | undefined;
 }
