@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <?ifndef Version?>
+  <?define Version=0.0.0?>
+  <?endif?>
+
+  <?ifndef Manufacturer?>
+  <?define Manufacturer=MongoDB Inc.?>
+  <?endif?>
+
+  <?ifndef BuildFolder?>
+  <?define BuildFolder=$(sys.SOURCEFILEDIR)..\..\mongosh-$(var.Version)-dev.0-win32?>
+  <?endif?>
+
+  <?ifndef ProgramFilesFolder?>
+  <?if $(sys.BUILDARCH)=x64 OR $(sys.BUILDARCH)=Intel64 OR $(sys.BUILDARCH)=Arm64?>
+  <?define ProgramFilesFolder=ProgramFiles64Folder?>
+  <?else?>
+  <?define ProgramFilesFolder=ProgramFilesFolder?>
+  <?endif?>
+  <?endif?>
+</Include>
